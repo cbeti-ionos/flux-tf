@@ -3,7 +3,7 @@
 NS=infrastructure
 
 kubectl create namespace $NS
-kubectl create -n $NS secret generic ionos-token --from-literal=credentials="{\"token\":\"${IONOS_TOKEN}\"}"
+kubectl create -n $NS secret generic ionos-token --from-literal=IONOS_TOKEN="${IONOS_TOKEN}"
 
 helm upgrade --install fluxcd -n $NS fluxcd-community/flux2
 helm upgrade --install tofu-controller -n $NS tofu-controller/tf-controller

@@ -11,6 +11,7 @@ spec:
     kind: GitRepository
     name: flux-tf
   runnerPodTemplate:
-    envFrom:
-      - secretRef:
-          name: ionos-token
+    spec:
+      envFrom:
+        - secretRef:
+            name: ionos-token
