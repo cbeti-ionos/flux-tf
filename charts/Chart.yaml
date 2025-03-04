@@ -1,0 +1,4 @@
+apiVersion: v2
+name: flux-tf
+description: Chart which installs resources for flux-tf provisioning
+version: 0.1.0

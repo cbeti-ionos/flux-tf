@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: flux-tf
+  namespace: infrastructure
+spec:
+  interval: 5m0s
+  url: https://github.com/cbeti-ionos/flux-tf
+  ref:
+    branch: main

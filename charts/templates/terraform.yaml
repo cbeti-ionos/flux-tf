@@ -1,0 +1,16 @@
+apiVersion: infra.contrib.fluxcd.io/v1alpha2
+kind: Terraform
+metadata:
+  name: flux-tf-example
+  namespace: infrastructure
+spec:
+  path: ./terraform
+  interval: 5m
+  approvePlan: auto
+  sourceRef:
+    kind: GitRepository
+    name: flux-tf
+  runnerPodTemplate:
+    envFrom:
+      - secretRef:
+          name: ionos-token
