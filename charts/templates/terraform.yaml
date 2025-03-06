@@ -7,6 +7,7 @@ spec:
   path: ./terraform
   interval: 5m
   approvePlan: auto
+  destroyResourcesOnDeletion: true
   sourceRef:
     kind: GitRepository
     name: flux-tf
