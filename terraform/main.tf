@@ -15,7 +15,7 @@ data "ionoscloud_image" "target" {
   location              = "us/las"
 }
 resource "ionoscloud_datacenter" "target" {
-    name                  = "Target Updated Test"
+    name                  = "Target Test"
     location              = "us/las"
     description           = "target"
     sec_auth_protection   = false
