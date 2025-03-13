@@ -15,7 +15,7 @@ data "ionoscloud_image" "target" {
   location              = "us/las"
 }
 resource "ionoscloud_datacenter" "target" {
-    name                  = "Target Test"
+    name                  = "Tofu-Controller-Test"
     location              = "us/las"
     description           = "target"
     sec_auth_protection   = false
@@ -23,15 +23,15 @@ resource "ionoscloud_datacenter" "target" {
 resource "ionoscloud_lan" "target" {
     datacenter_id         = ionoscloud_datacenter.target.id
     public                = true
-    name                  = "target"
+    name                  = "Tofu-Controller-Test"
 }
 resource "ionoscloud_ipblock" "target" {
     location              = ionoscloud_datacenter.target.location
     size                  = 1
-    name                  = "target"
+    name                  = "Tofu-Controller-Test"
 }
 resource "ionoscloud_server" "target" {
-    name                  = "target"
+    name                  = "Tofu-Controller-Test"
     datacenter_id         = ionoscloud_datacenter.target.id
     cores                 = 2
     ram                   = 2048
